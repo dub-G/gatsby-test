@@ -1,0 +1,30 @@
+.link {
+    color: gray;
+    font-size: .9rem;
+    margin-right: 1.3rem;
+    text-decoration: none;
+    &:hover {
+        color: #444444;
+    }
+    &-active{
+        color: #000000;
+    }
+}
+
+
+.nav {
+    padding: 1rem 0 3rem;
+}
+
+.title {
+    color: #000000;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+

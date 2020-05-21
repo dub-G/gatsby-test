@@ -6,8 +6,9 @@ const homePage = () => {
     return (
         <Layout>
         <div>
-            <div>Heolo world!</div>
-            <Link to="/about">about</Link>
+            <h1>Hello!</h1>
+            <h2>I'm Luigi, looking for a cool dev?</h2>
+            <Link to="/contact">Contact me</Link>
         </div>
         </Layout>
     )
