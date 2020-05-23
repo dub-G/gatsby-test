@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 
 const BlogPage = () => {
@@ -12,6 +13,9 @@ const BlogPage = () => {
                         frontmatter {
                         title
                         date
+                        }
+                    fields {
+                        slug
                         }
                     }
                 }
@@ -25,11 +29,13 @@ const BlogPage = () => {
                 <h1>Blog</h1>
                 <p>this is all you you need to knwo</p>
                 <ol>
-                {data.allMarkdownRemark.edges.map((item) => {
+                {data.allMarkdownRemark.edges.map((edge) => {
                     return( 
                     <li key={Math.random()}>
-                        <h2>{item.node.frontmatter.title}</h2>
-                        <p>{item.node.frontmatter.date}</p>
+                        <Link to={`/blog/${ edge.node.fields.slug }`}>
+                            <h2>{edge.node.frontmatter.title}</h2>
+                            <p>{edge.node.frontmatter.date}</p>
+                        </Link>
                     </li>
                     )})
                 }
