@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "env-cmd -f .env.development gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -20,6 +20,7 @@
     "gatsby-remark-autolink-headers": "^2.3.3",
     "gatsby-remark-images": "^3.3.8",
     "gatsby-remark-relative-images": "^0.3.0",
+    "gatsby-source-contentful": "^2.3.12",
     "gatsby-source-filesystem": "^2.3.7",
     "gatsby-transformer-remark": "^2.8.12",
     "node-sass": "^4.14.1",
@@ -27,6 +28,7 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "env-cmd": "^10.1.0",
     "prettier": "2.0.5"
   },
   "repository": {
